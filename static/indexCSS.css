@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+.html{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width:100%;
+    height: 100vh;
+    background:linear-gradient(180deg, #000000d9, #ffffff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.board{
+    position: absolute;
+    /* background-color: rgba(18, 20, 18, 0.933); */
+    width: 350px;
+    height: 350px;
+    border-radius: 15px;
+    /* box-shadow: 10px 10px 10px rgb(191, 187, 187); */
+    padding: 15px 15px 25px 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    justify-content: space-between;
+    gap: 13px;
+
+}
+.part{
+    padding: 5px;
+    font-size: 1.3rem;
+    background: linear-gradient( rgb(39, 5, 103), rgb(19, 131, 178))
+}
+.part:first-child ,.part:first-child img{
+    border-top-left-radius:15px ;
+}
+.part:nth-child(3), .part:nth-child(3) img{
+    border-top-right-radius:15px ;
+}
+.part:nth-child(7) , .part:nth-child(7) img{
+    border-bottom-left-radius:15px ;
+}
+.part:last-child , .part:last-child img{
+    border-bottom-right-radius:15px ;
+}
+.part:hover{
+    transform: scale(110%);
+    transition-property: all ;
+    transition-duration: .31s;
+
+}
+/* .part:active{
+    background-color: rgb(20, 101, 76);
+} */
+.part img{
+    height: 100%;
+    width: 100%;
+}
+
+.open{
+    cursor:not-allowed;
+}
+.banner, .player{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+.banner{
+    width: max(60%,800px);
+    min-height: max-content;
+    /* height: 15%; */
+    font-size: 4rem;
+    border-radius:30px ;
+    top: -1200px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    background:linear-gradient(0deg, #150234f9, #097e78d8);
+    text-shadow:10px #091be9a8;
+}
+.player{
+    width: 50%;
+    min-width: fit-content;
+    height: 10%;
+    background-color: #83aef37e;
+    top:-350px;
+    font-size: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    justify-content: space-around;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    color: rgb(240, 7, 7);
+    
+}
+.player input{
+    font-size: 1rem;
+    background-color: #eee9e9a8;
+    border: none;
+    padding:5px 0px 5px 2px;
+    margin: 10px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}
+.btn{
+    width: fit-content;
+    height: fit-content;
+
+
+}
+
+.turn{
+    background-color: rgb(20, 51, 188);
+}
+
+button{
+    background-color: #303679a8;
+    color: beige;
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    top: 180px;
+    text-align: center;
+    font-size: 2rem;
+    padding: 20px;
+    color: rgb(0, 37, 124);
+    font-weight: 900;
+    margin: 10px;
+
+}
+
+.winner{
+    animation-name: zingle;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes zingle {
+    0% {
+        transform: rotate(0deg) ;
+    }
+     25%{
+        transform: rotate(20deg) scale(110%);
+        /* transform: scale(110%); */
+    } 
+ 
+    75%{
+        transform: rotate(-20deg) scale(110%);
+    }
+
+}

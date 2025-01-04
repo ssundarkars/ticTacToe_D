@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe1.2</title>
+    <link rel="stylesheet" href="../static/indexCSS.css">
+
+
+</head>
+
+<body>
+    <div id="banner" class="banner">
+        Congrets!!!!
+    </div>
+    <div class="player">
+        <div class="first"><input id="player1" type="text" placeholder="Player1" ></div>
+        <div class="vs" >V/S</div>
+        <div class="second" ><input id="player2" type="text"placeholder="Player2"></div>     
+    </div>
+    <div class="board">
+        {% for i in ll %}
+        <!-- {{ i }} -->
+        <div class="part"><img src="../static/images.jpeg" alt="img"></div> 
+        <!-- <div class="part"><img src="../static/images.jpeg" alt="img"></div> -->
+        <!-- <div class="part"><img src="../static/images.jpeg" alt="img"></div> -->
+        <!-- <div class="part"><img src="../static/images.jpeg" alt="img"></div> -->
+        <!-- <div class="part"><img src="../static/images.jpeg" alt="img"></div> -->
+        <!-- <div class="part"><img src="../static/images.jpeg" alt="img"></div> -->
+        <!-- <div class="part"><img src="../static/images.jpeg" alt="img"></div> -->
+        <!-- <div class="part"><img src="../static/images.jpeg" alt="img"></div> -->
+        <!-- <div class="part"><img src="../static/images.jpeg" alt="img"></div> -->
+         {% endfor %}
+    </div>
+    <div class="btn">
+        <button id ="newgame" onClick="window.location.reload();" type="submit"> NEW </button>
+        <button id="restart"   type="submit">RESTART</button>
+    </div>
+
+    <script src="../static/newjavascript.js"></script>
+
+</body>
+
+</html>
