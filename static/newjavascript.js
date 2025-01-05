@@ -76,7 +76,7 @@ reset.addEventListener('click',function (){
 
 });
 
-
+//Need to change the logic for dynamic size 
 function  mainLogic(list){
     var p1='Player1';
     var p2='Player2';
